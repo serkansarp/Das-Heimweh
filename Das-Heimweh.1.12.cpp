@@ -8,11 +8,12 @@ using namespace std;
 
 /*
 	DAS HEIMWEH ~~
--	Turkiye disinda yasayan yazilimcilar (ve dolayisiyla diger Turk vatandaslari) dusunulerek ara sira acilip
+-	Yazilim Sanayicileri Dernegi (YASAD) Baskani Gonul Kamali'nin 2021 yilinda 30 bin yazilimcinin ulkeyi
+	terk ettigi haberi uzerine, ayrica dolayisiyla diger Turk vatandaslari dusunulerek ara sira acilip
 	oynanabilecek, illerin plaka kodlari sorulan bir oyundur.
 -	Sorulacak soru sayisi kullanici tarafindan belirlenir. Iller rastgele sorulur.
--	Konaklanilan iller denk geldiginde yer yer o ille ilgili anilarin hatirlanmasi beklenir. O nedenle sure
-	sinirlanmasi yoktur.
+-	Konaklanilan iller denk geldiginde yer yer o ille ilgili anilarin hatirlanmasi beklenir. O nedenle 10 saniye
+	icerisinde bilinmesi gibi bir sure sinirlanmasi yoktur.
 -	Marka degeri calismasi ile Almanca "Sila Hasreti" anlamina gelen sozcuk obegi secilmistir.
 -	Oyun sonunda basari yuzdesi, Solo Test basari siralamasi ve Ilkogretim Kurumlari Yonetmeligine gore 3 farkli
 	sekilde gosterilir.
