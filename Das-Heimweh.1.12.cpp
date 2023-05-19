@@ -2,7 +2,8 @@
 #include <clocale>
 #include <ctime>		//	Random icin gereklidir
 #include <iomanip>		//	Yüzde oraný küsürat hanesi ve setfill/setw için gereklidir
-#include <windows.h>	//	cls ve Sleep icin gereklidir
+#include <thread>		//	sleep için gereklidr
+#include <chrono>		//	+sleep icin gereklidir
 
 using namespace std;
 
@@ -51,7 +52,7 @@ int main() {
 
 	// Kaç soru soralým?
 	cout << "\t\tKendinizi kaç soruyla sýnamak istediðinizi giriniz (Yüksek sayý = hassas sonuç): "; cin >> kacSoru;
-	system("cls");
+	cout << "\033[2J\033[1;1H";		//	Ekran temizliði için ansi kaçýþ kodu (linux+windows)
 
 	// Yarýþma
 	while (soru <= kacSoru) {
@@ -67,8 +68,8 @@ int main() {
 			cout << "\tYanlýþ, doðrusu " << setfill('0') << setw(2) << rastgele << endl;
 			yanlisSayisi++;
 		}soru++;
-		Sleep(1000);
-		system("cls");
+		this_thread::sleep_for(chrono::milliseconds(1000));
+		cout << "\033[2J\033[1;1H";		//	Ekran temizliði için ansi kaçýþ kodu (linux+windows)
 	}
 
 
