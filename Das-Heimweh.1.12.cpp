@@ -1,8 +1,8 @@
 #include <iostream>
 #include <clocale>
 #include <ctime>		//	Random icin gereklidir
-#include <iomanip>		//	Yüzde oranı küsürat hanesi ve setfill/setw için gereklidir
-#include <thread>		//	sleep için gereklidr
+#include <iomanip>		//	YÃ¼zde oranÄ± kÃ¼sÃ¼rat hanesi ve setfill/setw iÃ§in gereklidir
+#include <thread>		//	sleep iÃ§in gereklidr
 #include <chrono>		//	+sleep icin gereklidir
 
 using namespace std;
@@ -25,7 +25,7 @@ using namespace std;
 
 
 int main() {
-	setlocale(LC_ALL, "Turkish");
+	setlocale(LC_ALL, "tr_TR.ISO-8859-9");
 	int soru = 1, rastgele = 0, kacSoru = 5, dogruSayisi = 0, yanlisSayisi = 0, plakaCevap = 0;
 	float sonuc = 0;
 	string ilCevap;
@@ -36,70 +36,70 @@ int main() {
 	cout << "\t\t" << (char)15 << "-----------------------------------------------" << (char)15 << endl;
 	cout << "\t\t|  DAS HEIMWEH               Serkan SARP @ 2023 |" << endl;
 	cout << "\t\t" << char(15) << "-----------------------------------------------" << (char)15 << endl << endl;
-	cout << "\t\tSeçtiğiniz kadar soru sayısıyla sınanarak Türkiye'den iller ve plaka kodları ile" << endl;
-	cout << "\t\tsınandığınız, başarı oranınızla kendinizi test ettiğiniz programdır." << endl << endl;
+	cout << "\t\tSeÃ§tiÄŸiniz kadar soru sayÄ±sÄ±yla sÄ±nanarak TÃ¼rkiye'den iller ve plaka kodlarÄ± ile" << endl;
+	cout << "\t\tsÄ±nandÄ±ÄŸÄ±nÄ±z, baÅŸarÄ± oranÄ±nÄ±zla kendinizi test ettiÄŸiniz programdÄ±r." << endl << endl;
 
 	//	IL ARRAYI
-	string il[82] = { "0","Adana","Adıyaman","Afyon","Ağrı","Amasya","Ankara","Antalya","Artvin","Aydın","Balıkesir",
-						"Bilecik","Bingöl","Bitlis","Bolu","Burdur","Bursa","Çanakkale","Çankırı","Çorum","Denizli",
-						"Diyarbakır","Edirne","Elazığ","Erzincan","Erzurum","Eskişehir","Gaziantep","Giresun","Gümüşhane","Hakkari",
-						"Hatay","Isparta","İçel","İstanbul","İzmir","Kars","Kastamonu","Kayseri","Kırklareli","Kırşehir",
-						"Kocaeli","Konya","Kütahya","Malatya","Manisa","Maraş","Mardin","Muğla","Muş","Nevşehir",
-						"Niğde","Ordu","Rize","Sakarya","Samsun","Siirt","Sinop","Sivas","Tekirdağ","Tokat",
-						"Trabzon","Tunceli","Urfa","Uşak","Van","Yozgat","Zonguldak","Aksaray","Bayburt","Karaman",
-						"Kırıkkale","Batman","Şırnak","Bartın","Ardahan","Iğdır","Yalova","Karabük","Kilis","Osmaniye",
-						"Düzce" };
+	string il[82] = { "0","Adana","AdÄ±yaman","Afyon","AÄŸrÄ±","Amasya","Ankara","Antalya","Artvin","AydÄ±n","BalÄ±kesir",
+						"Bilecik","BingÃ¶l","Bitlis","Bolu","Burdur","Bursa","Ã‡anakkale","Ã‡ankÄ±rÄ±","Ã‡orum","Denizli",
+						"DiyarbakÄ±r","Edirne","ElazÄ±ÄŸ","Erzincan","Erzurum","EskiÅŸehir","Gaziantep","Giresun","GÃ¼mÃ¼ÅŸhane","Hakkari",
+						"Hatay","Isparta","Ä°Ã§el","Ä°stanbul","Ä°zmir","Kars","Kastamonu","Kayseri","KÄ±rklareli","KÄ±rÅŸehir",
+						"Kocaeli","Konya","KÃ¼tahya","Malatya","Manisa","MaraÅŸ","Mardin","MuÄŸla","MuÅŸ","NevÅŸehir",
+						"NiÄŸde","Ordu","Rize","Sakarya","Samsun","Siirt","Sinop","Sivas","TekirdaÄŸ","Tokat",
+						"Trabzon","Tunceli","Urfa","UÅŸak","Van","Yozgat","Zonguldak","Aksaray","Bayburt","Karaman",
+						"KÄ±rÄ±kkale","Batman","ÅÄ±rnak","BartÄ±n","Ardahan","IÄŸdÄ±r","Yalova","KarabÃ¼k","Kilis","Osmaniye",
+						"DÃ¼zce" };
 
-	// Kaç soru soralım?
-	cout << "\t\tKendinizi kaç soruyla sınamak istediğinizi giriniz (Yüksek sayı = hassas sonuç): "; cin >> kacSoru;
-	cout << "\033[2J\033[1;1H";		//	Ekran temizliği için ansi kaçış kodu (linux+windows)
+	// KaÃ§ soru soralÄ±m?
+	cout << "\t\tKendinizi kaÃ§ soruyla sÄ±namak istediÄŸinizi giriniz (YÃ¼ksek sayÄ± = hassas sonuÃ§): "; cin >> kacSoru;
+	cout << "\033[2J\033[1;1H";		//	Ekran temizliÄŸi iÃ§in ansi kaÃ§Ä±ÅŸ kodu (linux+windows)
 
-	// Yarışma
+	// YarÄ±ÅŸma
 	while (soru <= kacSoru) {
 		cout << "\tDAS HEIMWEH" << endl << "\t................." << endl << "\tSORU " << soru << endl;
 		rastgele = rand() % (81 - 1 + 1) + 1;
 		cout << "\t" << il[rastgele] << ": ";
 		cin >> plakaCevap;
 		if (plakaCevap == rastgele) {
-			cout << "\tDoğru!" << endl;
+			cout << "\tDoÄŸru!" << endl;
 			dogruSayisi++;
 		}
 		else {
-			cout << "\tYanlış, doğrusu " << setfill('0') << setw(2) << rastgele << endl;
+			cout << "\tYanlÄ±ÅŸ, doÄŸrusu " << setfill('0') << setw(2) << rastgele << endl;
 			yanlisSayisi++;
 		}soru++;
 		this_thread::sleep_for(chrono::milliseconds(1000));
-		cout << "\033[2J\033[1;1H";		//	Ekran temizliği için ansi kaçış kodu (linux+windows)
+		cout << "\033[2J\033[1;1H";		//	Ekran temizliÄŸi iÃ§in ansi kaÃ§Ä±ÅŸ kodu (linux+windows)
 	}
 
 
 	// Hesap 
 	cout << "\tDAS HEIMWEH               Serkan SARP @ 2023" << endl << "\t............................................" << endl;
-	cout << "\t- " << kacSoru << " soruda " << dogruSayisi << " doğru / " << yanlisSayisi << " yanlış" << endl;
+	cout << "\t- " << kacSoru << " soruda " << dogruSayisi << " doÄŸru / " << yanlisSayisi << " yanlÄ±ÅŸ" << endl;
 	sonuc = dogruSayisi * 100 / (float)kacSoru;
-	cout << "\t  % " << fixed << setprecision(2) << sonuc << " başarılı oldunuz." << endl << endl;
+	cout << "\t  % " << fixed << setprecision(2) << sonuc << " baÅŸarÄ±lÄ± oldunuz." << endl << endl;
 
-	cout << "\t- Solo Test'e göre ";
+	cout << "\t- Solo Test'e gÃ¶re ";
 
 	if (sonuc < 11.12) { cout << "Beyinsiz"; }
-	else if (sonuc < 22.23) { cout << "Gerizekalı"; }
+	else if (sonuc < 22.23) { cout << "GerizekalÄ±"; }
 	else if (sonuc < 33.34) { cout << "Aptal"; }
-	else if (sonuc < 44.45) { cout << "Tecrübesiz"; }
+	else if (sonuc < 44.45) { cout << "TecrÃ¼besiz"; }
 	else if (sonuc < 55.56) { cout << "Normal"; }
-	else if (sonuc < 66.67) { cout << "Başarılı"; }
+	else if (sonuc < 66.67) { cout << "BaÅŸarÄ±lÄ±"; }
 	else if (sonuc < 77.78) { cout << "Kurnaz"; }
 	else if (sonuc < 88.89) { cout << "Zeki"; }
 	else { cout << "Bilgin"; }
-	cout << " derecesindesiniz.\n\t- İlköğretim Kurumları Yönetmeliğine göre ";
+	cout << " derecesindesiniz.\n\t- Ä°lkÃ¶ÄŸretim KurumlarÄ± YÃ¶netmeliÄŸine gÃ¶re ";
 
-	if (sonuc < 45) { cout << "(1) Başarısız"; }
-	else if (sonuc < 55) { cout << "(2) Geçer"; }
+	if (sonuc < 45) { cout << "(1) BaÅŸarÄ±sÄ±z"; }
+	else if (sonuc < 55) { cout << "(2) GeÃ§er"; }
 	else if (sonuc < 69) { cout << "(3) Orta"; }
-	else if (sonuc < 85) { cout << "(4) İyi"; }
+	else if (sonuc < 85) { cout << "(4) Ä°yi"; }
 	else { cout << "(5) Pekiyi"; }
-	cout << " not aldınız." << endl << endl;
+	cout << " not aldÄ±nÄ±z." << endl << endl;
 
-	cout << "\t- Yüksek sonuçlar için kendinizi sınamaya devam edebilir,\n\t  hassas sonuçlar için soru sayısını yüksek tutabilirsiniz." << endl << endl;
+	cout << "\t- YÃ¼ksek sonuÃ§lar iÃ§in kendinizi sÄ±namaya devam edebilir,\n\t  hassas sonuÃ§lar iÃ§in soru sayÄ±sÄ±nÄ± yÃ¼ksek tutabilirsiniz." << endl << endl;
 
 	cout << endl; return 0;
 }
