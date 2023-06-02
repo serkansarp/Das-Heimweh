@@ -25,7 +25,7 @@ using namespace std;
 
 
 int main() {
-	setlocale(LC_ALL, "Turkish");
+	setlocale(LC_ALL, "tr_TR.ISO-8859-9"); 
 	int soru = 1, rastgele = 0, kacSoru = 5, dogruSayisi = 0, yanlisSayisi = 0, plakaCevap = 0;
 	float sonuc = 0;
 	string ilCevap;
