@@ -5,5 +5,5 @@
 #### Marka değeri çalışması ile Almanca "Sıla Hasreti" anlamına gelen sözcük öbeği, oyun adı olarak seçilmiştir.
 #### Oyun sonunda başarı durumu: Yüzde, Solo Test başarı sıralaması ve İlköğretim Kurumları Yönetmeliği'ne göre 3 farklı şekilde hesaplanıp gösterilir
 #### Yazılım geliştirildiği süreçte Türkiye'de 81 il bulunuyor. Sayı çoğalırsa il arrayinin devamına eklenip while döngüsündeki rand yüzdesinin yanındaki 81 sayısı değiştirilerek yeni duruma uyum sağlanılabilir. Ancak bir gün il kodları farklı illeri temsil edecek şekilde bir değişiklik yapılacak olursa dizi tekrar yazılmalıdır.
-#####  İkinci oyun yakın zamanda geliyor.
+##### * İkinci oyun [Das Heimweh II](https://github.com/serkansarp/Das-Heimweh-II) çıktı.
 ##### <ins>Serkan SARP - Ankara</ins>
